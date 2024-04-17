@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FormsModule,CommonModule],
+  imports: [RouterOutlet,FormsModule,CommonModule,HomeComponent,FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

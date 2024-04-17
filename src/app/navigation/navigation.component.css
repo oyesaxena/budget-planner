@@ -1,0 +1,20 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    background-color: black; /* Set overall background color */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the header section with linear background */
+.header-section {
+    background: linear-gradient(to right, #4e54c8, #8f94fb); /* Set linear gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Navbar styles */
+.navbar{
+}
