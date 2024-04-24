@@ -1,7 +1,39 @@
 <app-side-nav></app-side-nav>
-<div class="container">
+
+<div>
+  <select [(ngModel)]="shape" name="shape">
+  <option value="circle">circle</option>
+  <option value="square">square</option>
+</select>
+<br>
+  <select [(ngModel)]="color" name="color">
+  <option value="red">red</option>
+  <option value="green">green</option>
+</select>
+</div>
+
+<button (click)="setClass()" >set</button> 
+
+<div class="shape {{className}}">
+  {{className}}
+
+
+
+</div>
+<form [formGroup]="myForm">
+  <input formControlName="uname" type="text"  />
+  <button (click)="onSub()">sub</button>
+</form>
+<div appColorChange [num]="num" [div]="2" > CLICK ME  </div>
+
+<div>
+  <button (click)="addToCart()" >++++</button>
+  <button (click)="removeCart()">----</button>
+</div>
+{{cart|async}}
+<!-- <app-test (newEvent)="divideArr($event)" [showArr]="sendArr" ></app-test> -->
+<!-- <div class="container">
     <div class="card-container">
-        <!-- Income Card -->
         <div class="card">
             <div class="card-header">
                 <span class="icon income-icon"><mat-icon>attach_money</mat-icon></span>
@@ -23,7 +55,6 @@
             </div>
         </div>
 
-        <!-- Expense Card -->   
         <div class="card">
             <div class="card-header">
               <span class="icon expense-icon"><mat-icon>money_off</mat-icon></span>
@@ -45,7 +76,6 @@
             <button class="button" (click)="onExpense()">View</button> 
         </div>
 
-        <!-- To DO Trans -->
         <div class="card">
             <div class="card-header">
               <span class="icon todo-icon"><mat-icon>assignment</mat-icon></span>
@@ -62,7 +92,6 @@
             </ul>
             <button class="button" (click)="onTodo()">View</button> 
           </div>
-        <!-- Total -->
 
         <div class="card">
             <div class="card-header">
@@ -90,4 +119,4 @@
             </div>
           </div>
     </div>
-</div>
+</div> -->
